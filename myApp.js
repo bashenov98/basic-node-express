@@ -10,6 +10,7 @@ if (process.env.MESSAGE_STYLE === 'uppercase') {
   } else {
     response = "Hello World";
   }
+  console.log({"message": response});
 
 app.use("/public", express.static(__dirname + "/public"));
 
