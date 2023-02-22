@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-require('dotenv').config({path:__dirname + '/.env'});
+require('dotenv').config({path:__dirname + '.env'});
 
 console.log("Hello World");
 
