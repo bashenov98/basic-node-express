@@ -5,12 +5,11 @@ require('dotenv').config({path:__dirname + '/.env'});
 
 var response = "Hello World";
 
-if (process.env.MESSAGE_STYLE === 'uppercase') {
+if (process.env.MESSAGE_STYLE === "allCaps") {
     response = "Hello World".toUpperCase();
   } else {
     response = "Hello World";
   }
-  console.log({"message": response});
 
 app.use("/public", express.static(__dirname + "/public"));
 
