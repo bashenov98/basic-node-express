@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.get('/now', (req, res, next) => {
     req.time = new Date().toString();
     next();
-}, (req, res) => {return res.json({time: req.time});})
+}, (req, res) => {return res.json({time: req.time});});
 
 app.get('/json', (req, res) =>  {
     let message = 'Hello json'
@@ -24,6 +24,8 @@ app.get('/json', (req, res) =>  {
   }
   return res.status(200).json({"message": message})});
 
+app.get('/:word/echo', (req, res) => {
+        return res.json({"echo": req.params.word})});
 
 
 
